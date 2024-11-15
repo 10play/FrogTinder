@@ -1,13 +1,7 @@
 import { useState } from "react";
 import TinderCard from "react-tinder-card";
-import { FROG_IDS, FROGS } from "./constants";
+import { FROGS } from "./constants";
 import "./index.css";
-
-function getRandomId(min: number, max: number) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
 export const TinderSwiper = () => {
   const [cards, setCards] = useState(FROGS);
@@ -17,13 +11,11 @@ export const TinderSwiper = () => {
     url: string;
   } | null>(null);
 
-  const onSwipe = (direction: string, name: string) => {
+  const onSwipe = (direction: string, name: string, id: string) => {
     console.log(`${name} swiped ${direction}`);
     if (direction === "right") {
       console.log("Opening necklace generator");
-      const url = `https://dc7.getfrogs.xyz/necklace/${
-        FROG_IDS[getRandomId(0, FROG_IDS.length - 1)]
-      }`;
+      const url = `https://dc7.getfrogs.xyz/necklace/${id}`;
 
       const newTab = window.open(url, "_blank");
 
@@ -57,15 +49,19 @@ export const TinderSwiper = () => {
     <div className="tinder-swiper">
       {cards.map((frog) => (
         <TinderCard
-          key={frog.name}
-          onSwipe={(dir) => onSwipe(dir, frog.name)}
+          key={frog.id}
+          onSwipe={(dir) => onSwipe(dir, frog.name, frog.id)}
           onCardLeftScreen={() => onCardLeftScreen(frog.name)}
           preventSwipe={["up", "down"]}
           className="swipe-card"
         >
           <div className="tinder-card">
             <img src={frog.img} alt={frog.name} className="card-image" />
-            <div className="card-name">{frog.name}</div>
+            <div className="card-name">
+             <b>{frog.name}</b> 
+            <div className="card-bio">{frog.bio}</div>
+            </div>
+            
           </div>
         </TinderCard>
       ))}
