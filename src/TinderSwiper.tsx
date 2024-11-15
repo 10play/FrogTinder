@@ -4,26 +4,34 @@ import { FROG_IDS, FROGS } from "./constants";
 import "./index.css";
 
 function getRandomId(min: number, max: number) {
-  // Ensure min and max are integers
   min = Math.ceil(min);
   max = Math.floor(max);
-
-  // Generate random integer between min and max (inclusive)
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 export const TinderSwiper = () => {
   const [cards, setCards] = useState(FROGS);
+  const [showFallbackPopup, setShowFallbackPopup] = useState(false);
+  const [fallbackData, setFallbackData] = useState<{
+    name: string;
+    url: string;
+  } | null>(null);
 
   const onSwipe = (direction: string, name: string) => {
     console.log(`${name} swiped ${direction}`);
     if (direction === "right") {
-      window.open(
-        `https://dc7.getfrogs.xyz/necklace/${
-          FROG_IDS[getRandomId(0, FROG_IDS.length)]
-        }`,
-        "_blank"
-      );
+      console.log("Opening necklace generator");
+      const url = `https://dc7.getfrogs.xyz/necklace/${
+        FROG_IDS[getRandomId(0, FROG_IDS.length - 1)]
+      }`;
+
+      const newTab = window.open(url, "_blank");
+
+      if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
+        // Fallback for iOS: Show a popup with a button
+        setFallbackData({ name, url });
+        setShowFallbackPopup(true);
+      }
     }
   };
 
@@ -36,6 +44,13 @@ export const TinderSwiper = () => {
         return swipedCard ? [...updatedCards, swipedCard] : updatedCards;
       });
     }, 300);
+  };
+
+  const handleFallbackClick = () => {
+    if (fallbackData) {
+      window.open(fallbackData.url, "_blank");
+      setShowFallbackPopup(false);
+    }
   };
 
   return (
@@ -54,6 +69,26 @@ export const TinderSwiper = () => {
           </div>
         </TinderCard>
       ))}
+      {showFallbackPopup && fallbackData && (
+        <div className="fallback-popup">
+          <div className="popup-content">
+            <h3 className="popup-title">Open Link for {fallbackData.name}</h3>
+            <p className="popup-description">
+              You can open the link manually by clicking the button below:
+            </p>
+            <p className="popup-link">{fallbackData.url}</p>
+            <button onClick={handleFallbackClick} className="popup-button">
+              Open Link
+            </button>
+            <button
+              onClick={() => setShowFallbackPopup(false)}
+              className="popup-button cancel-button"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
