@@ -1,61 +1,132 @@
 /* Ensure the swiper is centered */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
 .tinder-swiper {
   position: relative;
   width: 90%;
   max-width: 400px;
   height: 70vh;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Ensure all cards are stacked */
-.swipe-card {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 12px auto;
 }
 
 /* Styling for each card */
-.tinder-card {
+.card {
+  position: absolute;
   width: 100%;
   height: 100%;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-/* Image styling */
-.card-image {
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
-  border-radius: 15px 15px 0 0;
-}
-
-/* Name styling */
-.card-name {
-  position: absolute;
-  bottom: 10px;
-  width: 80%;
-  border-radius: 4px;
-  color: black;
-  padding: 20px;
-  text-align: left;
+  justify-content: space-between;
   background-color: white;
+  padding-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+}
 
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.card--active {
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card__image-container {
+  position: relative;
+}
+
+.card__image {
+  max-width: 100%;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.card__accept-btn {
+  position: absolute;
+  z-index: 100;
+  content: "";
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  right: 14px;
+  bottom: -25px;
+  background-color: green;
+  -webkit-box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Fallback Popup Overlay */
@@ -65,7 +136,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +154,6 @@
   text-align: center;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Popup Title */
@@ -152,4 +223,67 @@
     font-size: 14px;
     padding: 8px 15px;
   }
+}
+
+.card__text {
+}
+
+.frog-tinder-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d6a4f; /* Swampy green background */
+  padding: 10px;
+  height: 80px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.frog-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+}
+
+.flame-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.flame-icon.flipped {
+  transform: scaleX(-1); /* Flip the flame for symmetry */
+}
+
+.header-text {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000000;
+  margin: 0 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d6a4f; /* Swampy green */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 10px 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #ff0000; /* Red for the heart emoji */
+  margin: 0 5px;
+  font-size: 18px;
 }
