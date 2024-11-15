@@ -9,7 +9,7 @@ export const Footer = () => {
       }}
     >
       <span className="footer-text">
-        Made with <span className="heart">❤️</span> 10Play
+        Made with <span className="heart">❤️</span> by 10Play
       </span>
     </footer>
   );
