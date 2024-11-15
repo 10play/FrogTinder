@@ -4,9 +4,27 @@ import { FROGS } from "./constants";
 import "./index.css";
 import { Heart } from "lucide-react";
 
+function shuffleArray<T>(array: T[]): T[] {
+  // Create a copy of the array to avoid mutating the original
+  const arrayCopy = [...array];
+
+  // Shuffle using the Fisher-Yates algorithm
+  for (let i = arrayCopy.length - 1; i > 0; i--) {
+      const randomIndex = Math.floor(Math.random() * (i + 1));
+
+      // Swap elements
+      [arrayCopy[i], arrayCopy[randomIndex]] = [arrayCopy[randomIndex], arrayCopy[i]];
+  }
+
+  return arrayCopy;
+}
+
+
+const shuffledCards = shuffleArray(FROGS)
+
 export const TinderSwiper = () => {
-  const [cards, setCards] = useState(FROGS.slice(0, 20));
-  const [page, setPage] = useState(0);
+  const [cards, setCards] = useState([...shuffledCards].slice(0, 20));
+  const [page, setPage] = useState(1);
   const [showFallbackPopup, setShowFallbackPopup] = useState(false);
   const [fallbackData, setFallbackData] = useState<{
     name: string;
@@ -33,7 +51,13 @@ export const TinderSwiper = () => {
     console.log(`${name} left the screen`);
 
     setTimeout(() => {
-      setCards(FROGS.slice(page + 1, page + 20));
+      setCards(prevCards => {
+        const updatedCards = prevCards.filter((frog) => frog.name !== name);
+        updatedCards.unshift(shuffledCards[page + 20])
+        
+        return updatedCards
+      });
+      
       setPage((prevPage) => prevPage + 1);
     }, 300);
   };
