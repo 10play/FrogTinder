@@ -4,6 +4,7 @@ import { FROG_IDS, FROGS } from "./constants";
 import "./index.css";
 
 function getRandomId(min: number, max: number) {
+  // Ensure min and max are integers
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -55,20 +56,27 @@ export const TinderSwiper = () => {
 
   return (
     <div className="tinder-swiper">
-      {cards.map((frog) => (
-        <TinderCard
-          key={frog.name}
-          onSwipe={(dir) => onSwipe(dir, frog.name)}
-          onCardLeftScreen={() => onCardLeftScreen(frog.name)}
-          preventSwipe={["up", "down"]}
-          className="swipe-card"
-        >
-          <div className="tinder-card">
-            <img src={frog.img} alt={frog.name} className="card-image" />
-            <div className="card-name">{frog.name}</div>
-          </div>
-        </TinderCard>
-      ))}
+      {cards.map((frog, index) => {
+        const activeCard = index === 0;
+        return (
+          <TinderCard
+            key={frog.name}
+            onSwipe={(dir) => onSwipe(dir, frog.name)}
+            onCardLeftScreen={() => onCardLeftScreen(frog.name)}
+            preventSwipe={["up", "down"]}
+            className={activeCard ? "card card--active" : "card"}
+          >
+            <img
+              className="card__image"
+              src={frog.img}
+              style={{
+                maxWidth: "100%",
+              }}
+            />
+            <div>{frog.name}</div>
+          </TinderCard>
+        );
+      })}
       {showFallbackPopup && fallbackData && (
         <div className="fallback-popup">
           <div className="popup-content">
