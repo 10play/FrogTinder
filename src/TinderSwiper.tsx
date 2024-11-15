@@ -1,30 +1,22 @@
 import { useState } from "react";
 import TinderCard from "react-tinder-card";
-import { FROG_IDS, FROGS } from "./constants";
+import { FROGS } from "./constants";
 import "./index.css";
 
-function getRandomId(min: number, max: number) {
-  // Ensure min and max are integers
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 export const TinderSwiper = () => {
-  const [cards, setCards] = useState(FROGS);
+  const [cards, setCards] = useState(FROGS.slice(0, 20));
+  const [page, setPage] = useState(0);
   const [showFallbackPopup, setShowFallbackPopup] = useState(false);
   const [fallbackData, setFallbackData] = useState<{
     name: string;
     url: string;
   } | null>(null);
 
-  const onSwipe = (direction: string, name: string) => {
+  const onSwipe = (direction: string, name: string, id: string) => {
     console.log(`${name} swiped ${direction}`);
     if (direction === "right") {
       console.log("Opening necklace generator");
-      const url = `https://dc7.getfrogs.xyz/necklace/${
-        FROG_IDS[getRandomId(0, FROG_IDS.length - 1)]
-      }`;
+      const url = `https://dc7.getfrogs.xyz/necklace/${id}`;
 
       const newTab = window.open(url, "_blank");
 
@@ -38,12 +30,10 @@ export const TinderSwiper = () => {
 
   const onCardLeftScreen = (name: string) => {
     console.log(`${name} left the screen`);
+
     setTimeout(() => {
-      setCards((prevCards) => {
-        const updatedCards = prevCards.filter((frog) => frog.name !== name);
-        const swipedCard = prevCards.find((frog) => frog.name === name);
-        return swipedCard ? [...updatedCards, swipedCard] : updatedCards;
-      });
+      setCards(FROGS.slice(page + 1, page + 20));
+      setPage((prevPage) => prevPage + 1);
     }, 300);
   };
 
@@ -56,12 +46,12 @@ export const TinderSwiper = () => {
 
   return (
     <div className="tinder-swiper">
-      {cards.map((frog, index) => {
-        const activeCard = index === 0;
+      {cards.map((frog, i) => {
+        const activeCard = i === 0;
         return (
           <TinderCard
-            key={frog.name}
-            onSwipe={(dir) => onSwipe(dir, frog.name)}
+            key={frog.id}
+            onSwipe={(dir) => onSwipe(dir, frog.name, frog.id)}
             onCardLeftScreen={() => onCardLeftScreen(frog.name)}
             preventSwipe={["up", "down"]}
             className={activeCard ? "card card--active" : "card"}
