@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TinderCard from "react-tinder-card";
 import { FROG_IDS, FROGS } from "./constants";
 import "./index.css";
 
-function getRandomId(min, max) {
+function getRandomId(min: number, max: number) {
   // Ensure min and max are integers
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -40,7 +40,7 @@ export const TinderSwiper = () => {
 
   return (
     <div className="tinder-swiper">
-      {cards.map((frog, index) => (
+      {cards.map((frog) => (
         <TinderCard
           key={frog.name}
           onSwipe={(dir) => onSwipe(dir, frog.name)}
