@@ -100,11 +100,35 @@ h6 {
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
+.card__image-container {
+  position: relative;
+}
+
 .card__image {
   max-width: 100%;
   -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.card__accept-btn {
+  position: absolute;
+  z-index: 100;
+  content: "";
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  right: 14px;
+  bottom: -25px;
+  background-color: green;
+  -webkit-box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Fallback Popup Overlay */

@@ -2,6 +2,7 @@ import { useState } from "react";
 import TinderCard from "react-tinder-card";
 import { FROGS } from "./constants";
 import "./index.css";
+import { Heart } from "lucide-react";
 
 export const TinderSwiper = () => {
   const [cards, setCards] = useState(FROGS.slice(0, 20));
@@ -56,13 +57,23 @@ export const TinderSwiper = () => {
             preventSwipe={["up", "down"]}
             className={activeCard ? "card card--active" : "card"}
           >
-            <img
-              className="card__image"
-              src={frog.img}
-              style={{
-                maxWidth: "100%",
-              }}
-            />
+            <div className="card__image-container">
+              <img
+                className="card__image"
+                src={frog.img}
+                style={{
+                  maxWidth: "100%",
+                }}
+              />
+              <div
+                className="card__accept-btn"
+                onClick={() => {
+                  onSwipe("right", frog.name, frog.id);
+                }}
+              >
+                <Heart color="white" size={16} />
+              </div>
+            </div>
             <div>{frog.name}</div>
           </TinderCard>
         );
