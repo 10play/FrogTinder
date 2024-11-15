@@ -4,7 +4,8 @@ import { FROGS } from "./constants";
 import "./index.css";
 
 export const TinderSwiper = () => {
-  const [cards, setCards] = useState(FROGS);
+  const [cards, setCards] = useState(FROGS.slice(0, 20));
+  const [page, setPage] = useState(0);
   const [showFallbackPopup, setShowFallbackPopup] = useState(false);
   const [fallbackData, setFallbackData] = useState<{
     name: string;
@@ -29,12 +30,10 @@ export const TinderSwiper = () => {
 
   const onCardLeftScreen = (name: string) => {
     console.log(`${name} left the screen`);
+    
     setTimeout(() => {
-      setCards((prevCards) => {
-        const updatedCards = prevCards.filter((frog) => frog.name !== name);
-        const swipedCard = prevCards.find((frog) => frog.name === name);
-        return swipedCard ? [...updatedCards, swipedCard] : updatedCards;
-      });
+      setCards(FROGS.slice(page + 1, page + 20));
+      setPage((prevPage) => prevPage + 1);
     }, 300);
   };
 
