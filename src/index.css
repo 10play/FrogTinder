@@ -102,10 +102,13 @@ h6 {
 
 .card__image-container {
   position: relative;
+  height: 85%;
+  /* height: 80%; */
+  width: 100%;
+  background-size: cover;
 }
 
 .card__image {
-  max-width: 100%;
   -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
@@ -128,8 +131,25 @@ h6 {
   -webkit-box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 25px 5px rgba(0, 0, 0, 0.1);
-
 }
+
+.card__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 12px;
+}
+
+.card__text--title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.card__text--subtitle {
+  font-weight: 500;
+  font-size: 16px;
+}
+
 
 /* Fallback Popup Overlay */
 .fallback-popup {

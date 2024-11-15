@@ -57,14 +57,12 @@ export const TinderSwiper = () => {
             preventSwipe={["up", "down"]}
             className={activeCard ? "card card--active" : "card"}
           >
-            <div className="card__image-container">
-              <img
-                className="card__image"
-                src={frog.img}
-                style={{
-                  maxWidth: "100%",
-                }}
-              />
+            <div
+              className="card__image-container"
+              style={{
+                background: `url(${frog.img}) no-repeat center`,
+              }}
+            >
               <div
                 className="card__accept-btn"
                 onClick={() => {
@@ -74,7 +72,10 @@ export const TinderSwiper = () => {
                 <Heart color="white" size={16} />
               </div>
             </div>
-            <div>{frog.name}</div>
+            <div className="card__text-container">
+              <div className="card__text--title">{frog.name}</div>
+              <div className="card__text--subtitle">{frog.bio}</div>
+            </div>
           </TinderCard>
         );
       })}
