@@ -1,5 +1,4 @@
 import "./index.css";
-import TenPlay from "./assets/logo.svg"; // Path to your flame.svg file
 
 export const Footer = () => {
   return (
