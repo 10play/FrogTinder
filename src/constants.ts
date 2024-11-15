@@ -830,3 +830,2407 @@ export const FROG_IDS = [
   "38b8fac5-59ec-4746-ab11-c7fd8e5983b0",
   "d7563edc-909d-4faf-b518-e1f1cb04e833",
 ];
+
+
+const randomNamesAndBio = [
+  {
+      "name": "Leap Ribbitz",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Leap Toshi",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Ribbit ETH Croakster",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Ribbit Nakamoto",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Staked APE McCroak",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Lily BTC Vault",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Buggy Toshi",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Ribbit Croakster",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Staked Nakamoto",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Hoppy Ribbitz",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Crypto Smith",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Toad BTC McCroak",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Ribbit DOT DAO",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Leap BTC Toshi",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Ribbit Nakamoto",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Crypto SOL Nakamoto",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Toad BTC Croakster",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Fly Smith",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Leap Toshi",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Staked Fiend",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Lily SOL DAO",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Fly SOL DAO",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Ribbit SOL Ribbitz",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Toad BTC Smith",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Ribbit APE McCroak",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Crypto SOL Croakster",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Hoppy McCroak",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "0x Nakamoto",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Staked DOT Smith",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Crypto 0x McCroak",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Degen SOL Master",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "0x ETH Master",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Staked DAO",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "0x Hopper",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Toad APE DAO",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Buggy 0x Smith",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Ribbit Croakster",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Leap DOT Ribbitz",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Crypto McCroak",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Ribbit Croakster",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Lily DOT Nakamoto",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Toad 0x Fiend",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Toad Vault",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Leap Toshi",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Toad SOL Fiend",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Fly BTC Vault",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Toad APE Hopper",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Fly Toshi",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Fly McCroak",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Crypto Vault",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Ribbit Hopper",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Crypto 0x Master",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Lily Hopper",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Buggy McCroak",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Lily Nakamoto",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Fly BTC Croakster",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Ribbit DAO",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Fly BTC Vault",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Buggy Toshi",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Staked Ribbitz",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Leap McCroak",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Leap Toshi",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Fly Vault",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Degen DOT McCroak",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Leap Hopper",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Fly DAO",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Lily Croakster",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Staked DAO",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Leap ETH Toshi",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Toad DOT McCroak",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Staked Nakamoto",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "0x Toshi",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Hoppy Croakster",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Toad Master",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "0x ETH Fiend",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Fly BTC Nakamoto",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "0x APE Master",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Fly DAO",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "0x 0x Master",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Toad APE Ribbitz",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Staked McCroak",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Hoppy DOT Hopper",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Leap ETH Smith",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Crypto ETH Smith",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Buggy DAO",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Lily 0x Croakster",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Toad Ribbitz",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Froggo DOT Master",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Froggo ETH Croakster",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Lily 0x Master",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Froggo 0x DAO",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Ribbit ETH Nakamoto",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Toad DOT Fiend",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Fly APE Fiend",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Crypto DOT Toshi",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Leap DAO",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Leap Croakster",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Hoppy Croakster",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Leap Toshi",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Toad DOT Toshi",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Degen Ribbitz",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Crypto Toshi",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Crypto Hopper",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Froggo Master",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Crypto SOL DAO",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Ribbit Nakamoto",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Buggy ETH Nakamoto",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Hoppy Ribbitz",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Crypto Vault",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Staked Vault",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Fly Fiend",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Hoppy BTC McCroak",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Buggy DOT McCroak",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Leap Toshi",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "0x Toshi",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Toad ETH Ribbitz",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Froggo Hopper",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Staked BTC DAO",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Lily DOT Nakamoto",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Crypto Smith",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Degen Ribbitz",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Toad McCroak",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Degen Croakster",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Ribbit Smith",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Toad SOL Fiend",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Degen 0x Vault",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "0x Smith",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Ribbit SOL Nakamoto",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Fly SOL DAO",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Ribbit Ribbitz",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Buggy Fiend",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Froggo 0x Nakamoto",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Froggo BTC McCroak",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Fly 0x Nakamoto",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Fly DAO",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Degen SOL Smith",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Staked Master",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Leap Croakster",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Degen McCroak",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Toad Croakster",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Hoppy Hopper",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Crypto DOT McCroak",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Fly Toshi",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "0x Smith",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Buggy Hopper",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Ribbit Croakster",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Crypto SOL Fiend",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Fly SOL Ribbitz",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Staked ETH Ribbitz",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Degen APE McCroak",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Buggy DOT Toshi",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Crypto SOL Master",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Fly Vault",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Leap Ribbitz",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Buggy McCroak",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Hoppy McCroak",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Staked BTC Master",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Hoppy McCroak",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "0x APE Master",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Fly APE Croakster",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Crypto ETH Toshi",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Toad Fiend",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Lily SOL Smith",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Leap DOT DAO",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Toad 0x Hopper",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Degen Ribbitz",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Ribbit DOT Smith",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Staked Fiend",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Froggo DAO",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Hoppy 0x Nakamoto",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Buggy Smith",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Toad DAO",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Leap SOL Smith",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Lily 0x Master",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Leap McCroak",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Crypto Toshi",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Crypto Croakster",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Degen 0x Ribbitz",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Leap Nakamoto",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Ribbit Master",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Lily Master",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Fly Toshi",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Ribbit Toshi",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Ribbit SOL McCroak",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Ribbit 0x Ribbitz",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Lily ETH Smith",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "0x APE Hopper",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Staked Hopper",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Fly Toshi",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Buggy SOL Smith",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Staked DOT DAO",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Staked Hopper",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Froggo DOT Master",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Leap Master",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "0x BTC Nakamoto",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Hoppy McCroak",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Froggo BTC Croakster",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Fly Fiend",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Buggy 0x Master",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Buggy ETH Vault",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Fly BTC Vault",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Crypto Fiend",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Froggo Toshi",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Hoppy Croakster",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Hoppy SOL Ribbitz",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Hoppy BTC Nakamoto",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Leap SOL Croakster",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "0x Vault",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Degen 0x Croakster",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Fly Nakamoto",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Toad Nakamoto",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Leap Master",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Fly ETH Toshi",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Ribbit ETH Hopper",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Ribbit SOL DAO",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Froggo BTC Hopper",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Lily Master",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "0x Master",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Hoppy APE McCroak",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Lily Croakster",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Crypto 0x Croakster",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Froggo Toshi",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Ribbit APE DAO",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Froggo DOT Ribbitz",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Degen ETH Toshi",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "0x Toshi",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Staked Hopper",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Leap Croakster",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Toad Ribbitz",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Degen McCroak",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Fly BTC Vault",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Staked ETH Croakster",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Staked Ribbitz",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Toad DOT Vault",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Staked 0x Ribbitz",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Ribbit DOT Vault",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "0x Smith",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Ribbit McCroak",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Leap SOL Master",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Crypto BTC DAO",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Lily Nakamoto",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Buggy DOT DAO",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "0x Ribbitz",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Lily SOL Vault",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Fly Nakamoto",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Fly SOL Nakamoto",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Leap McCroak",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Froggo Toshi",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Toad 0x Master",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Crypto SOL Master",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Hoppy Croakster",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Hoppy 0x Fiend",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Ribbit ETH Master",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Buggy 0x Hopper",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Crypto ETH Nakamoto",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Ribbit ETH Ribbitz",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Crypto 0x Fiend",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Degen Vault",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Lily 0x Hopper",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Hoppy DOT Master",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "0x Vault",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Toad Ribbitz",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Hoppy 0x Fiend",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Ribbit Croakster",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Hoppy Toshi",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Lily DOT Toshi",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Buggy McCroak",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Froggo ETH Nakamoto",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Leap Master",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Crypto Smith",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Lily Smith",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Toad DAO",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Degen Ribbitz",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Buggy Toshi",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "0x Smith",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Hoppy Hopper",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "0x Nakamoto",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Toad Hopper",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Fly Hopper",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Leap McCroak",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Degen Toshi",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Degen BTC Vault",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Ribbit Ribbitz",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Buggy APE McCroak",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Toad Ribbitz",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Fly SOL Fiend",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Leap Toshi",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Buggy DAO",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Staked McCroak",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Buggy SOL Hopper",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Leap Smith",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Buggy SOL Hopper",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Buggy DOT Smith",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Lily 0x Master",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "0x Nakamoto",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Toad BTC Smith",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Leap Croakster",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "0x BTC McCroak",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Staked 0x Ribbitz",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Staked Hopper",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Lily 0x DAO",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Buggy SOL Master",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Degen SOL Croakster",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Toad SOL Toshi",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Ribbit ETH Hopper",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Degen 0x Master",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Degen BTC Nakamoto",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Fly ETH Master",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Buggy Master",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "0x Ribbitz",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Staked Smith",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Lily APE Vault",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Lily Nakamoto",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Toad Master",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Buggy 0x Smith",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Fly Ribbitz",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Ribbit Croakster",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Leap DOT Smith",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Froggo APE Toshi",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Degen 0x Ribbitz",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Toad 0x Nakamoto",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Leap Ribbitz",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Fly Croakster",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Crypto Toshi",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Hoppy APE Smith",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Leap Hopper",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "0x Vault",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Staked DAO",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Ribbit Master",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Leap SOL Vault",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Fly Vault",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Lily Croakster",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Hoppy Smith",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Froggo McCroak",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Degen APE Master",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Fly APE McCroak",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Ribbit DOT Ribbitz",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Lily Nakamoto",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Leap 0x Ribbitz",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Buggy Ribbitz",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Lily Ribbitz",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Staked Toshi",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Ribbit Toshi",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Crypto DOT Fiend",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Hoppy SOL DAO",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Leap ETH Nakamoto",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Fly BTC Fiend",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Buggy Nakamoto",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Degen SOL Croakster",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Fly Smith",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Crypto McCroak",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Staked SOL Nakamoto",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Leap Hopper",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Toad 0x DAO",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Staked DOT Toshi",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Leap 0x Croakster",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Fly APE Nakamoto",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Froggo Croakster",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Lily ETH McCroak",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Ribbit Ribbitz",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Froggo DOT DAO",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Fly Smith",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "0x Vault",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Buggy Vault",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Degen APE Fiend",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Ribbit 0x Toshi",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Hoppy ETH McCroak",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Crypto Master",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Hoppy Croakster",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Leap Hopper",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Hoppy Nakamoto",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Hoppy 0x Croakster",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Froggo ETH Hopper",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Fly BTC Croakster",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Hoppy Smith",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Degen Ribbitz",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Crypto 0x DAO",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Staked Vault",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Degen Vault",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Degen ETH Hopper",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Froggo Nakamoto",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Crypto Toshi",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Toad Nakamoto",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Buggy ETH Smith",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Staked Ribbitz",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Froggo DAO",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "0x McCroak",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Staked Hopper",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Froggo SOL Master",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Lily BTC Smith",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "0x Vault",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Leap 0x Nakamoto",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Buggy APE Master",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Buggy DOT Fiend",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Ribbit Master",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Fly ETH Master",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Degen DOT Smith",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Hoppy BTC Croakster",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Fly ETH Toshi",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Toad BTC DAO",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Toad Toshi",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Hoppy McCroak",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Leap DOT DAO",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Crypto Ribbitz",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Hoppy Vault",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Fly Ribbitz",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Crypto APE DAO",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Buggy Smith",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Leap Master",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Fly 0x DAO",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Crypto 0x Croakster",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Degen Toshi",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Lily BTC Nakamoto",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Crypto McCroak",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Lily 0x Nakamoto",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Toad Smith",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Crypto Master",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Hoppy Master",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Fly Ribbitz",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "0x BTC Smith",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Hoppy McCroak",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Degen BTC Vault",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Buggy DAO",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Crypto McCroak",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Staked SOL Master",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Buggy Smith",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Hoppy DAO",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Buggy Ribbitz",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Lily APE DAO",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Degen BTC Fiend",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Degen DAO",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Hoppy ETH DAO",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Froggo BTC Master",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Toad Ribbitz",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Crypto Croakster",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Buggy Toshi",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Hoppy Nakamoto",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Leap SOL DAO",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Froggo McCroak",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Hoppy Nakamoto",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "0x APE McCroak",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Ribbit 0x Ribbitz",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Ribbit APE DAO",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Crypto ETH Smith",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Ribbit McCroak",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Lily ETH McCroak",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Buggy Croakster",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Fly Master",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Hoppy Master",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "Toad Smith",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Degen Master",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Hoppy DAO",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Degen BTC Fiend",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Crypto Toshi",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Degen SOL Hopper",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Hoppy Croakster",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Degen APE Hopper",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Fly Master",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Froggo DOT Toshi",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Leap Vault",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "0x APE Fiend",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Toad BTC Master",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Staked APE McCroak",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Buggy Nakamoto",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Toad Vault",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Froggo 0x Toshi",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Staked ETH Toshi",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Fly Toshi",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Fly APE Nakamoto",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "0x BTC Master",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Lily 0x McCroak",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Lily Master",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Toad SOL DAO",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Froggo APE Smith",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Staked SOL Nakamoto",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Fly Toshi",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Ribbit Master",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "0x SOL DAO",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Hoppy Croakster",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Froggo DOT Master",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Froggo Hopper",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Toad APE Master",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Degen Croakster",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Toad Vault",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Degen DOT Ribbitz",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Fly ETH Nakamoto",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Fly ETH Smith",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "0x Nakamoto",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Degen Croakster",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Degen Fiend",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Toad SOL Ribbitz",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Buggy Vault",
+      "bio": "Governance-enabled and ready to vote you as my number one."
+  },
+  {
+      "name": "0x SOL Smith",
+      "bio": "They say every frog has its day. Maybe today is mine if you swipe right."
+  },
+  {
+      "name": "Lily ETH Hopper",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Staked McCroak",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Ribbit SOL Croakster",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Leap Toshi",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Crypto BTC Croakster",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Buggy DAO",
+      "bio": "Looking for my co-founder in the ecosystem of love."
+  },
+  {
+      "name": "Ribbit Hopper",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Froggo Master",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Lily Fiend",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Buggy BTC Fiend",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Ribbit DOT Toshi",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Fly 0x Smith",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Hoppy ETH Hopper",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Staked BTC Ribbitz",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Hoppy BTC Vault",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Leap ETH McCroak",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Hoppy BTC Smith",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Lily Ribbitz",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Degen Croakster",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Froggo DOT Ribbitz",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Ribbit Master",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Degen Smith",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Buggy SOL Fiend",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Crypto Ribbitz",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Hoppy Smith",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Lily Fiend",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "0x DOT Hopper",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Leap Smith",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Lily 0x Nakamoto",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Hoppy McCroak",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Staked ETH DAO",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Froggo Fiend",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Staked ETH Croakster",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Staked Toshi",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Hoppy DOT DAO",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Fly 0x Smith",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Froggo ETH DAO",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Fly 0x Toshi",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Hoppy APE Nakamoto",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Ribbit BTC Smith",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Staked Nakamoto",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Staked DOT Croakster",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Buggy APE Ribbitz",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Lily BTC Croakster",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Ribbit 0x DAO",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Leap Ribbitz",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Hoppy 0x McCroak",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Buggy 0x Ribbitz",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Hoppy APE Croakster",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Hoppy SOL McCroak",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Froggo BTC Master",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "0x BTC Smith",
+      "bio": "Professional fly catcher with a taste for adventure. Let\u2019s leap into the unknown together."
+  },
+  {
+      "name": "Crypto Hopper",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Hoppy BTC Ribbitz",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Crypto ETH Vault",
+      "bio": "Looking for a fellow fly enthusiast who can keep up with my energy."
+  },
+  {
+      "name": "Toad Ribbitz",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "0x Fiend",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Ribbit Ribbitz",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "0x BTC Hopper",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Ribbit DOT DAO",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Ribbit APE Croakster",
+      "bio": "Once staked my entire portfolio on a single leap\u2014and it paid off. Swipe right for bold moves."
+  },
+  {
+      "name": "Leap 0x Fiend",
+      "bio": "Big fan of smooth transactions and even smoother conversations."
+  },
+  {
+      "name": "Fly DOT McCroak",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "Fly Smith",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Fly SOL Croakster",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "0x DAO",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  },
+  {
+      "name": "Lily Croakster",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Ribbit Ribbitz",
+      "bio": "Leaps, dreams, and a whole lot of ribbits. That\u2019s what I\u2019m about."
+  },
+  {
+      "name": "0x DOT McCroak",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Froggo Croakster",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Leap Ribbitz",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Degen 0x Nakamoto",
+      "bio": "I don\u2019t just croak\u2014I innovate. Let\u2019s leap into a future of possibilities together."
+  },
+  {
+      "name": "Buggy BTC Ribbitz",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Buggy Croakster",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Hoppy Toshi",
+      "bio": "Part-time leap strategist, full-time bug connoisseur. Let\u2019s make a good team."
+  },
+  {
+      "name": "Hoppy Fiend",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Fly DOT Smith",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Froggo BTC Hopper",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Fly Nakamoto",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Leap McCroak",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "0x BTC DAO",
+      "bio": "Late-night croaks, early morning dives, and a whole lot of ambition. Let\u2019s hop together."
+  },
+  {
+      "name": "Fly Croakster",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "Crypto DOT Nakamoto",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Fly SOL Croakster",
+      "bio": "Just a frog with a lot of croaks and even more dreams. Let\u2019s hop to it."
+  },
+  {
+      "name": "Lily Fiend",
+      "bio": "Flies are great, but I\u2019m here for the vibes and late-night croaks by the pond."
+  },
+  {
+      "name": "Buggy 0x Nakamoto",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Leap Nakamoto",
+      "bio": "Smart contracts? Sure. Smart choices in love? Let\u2019s find out."
+  },
+  {
+      "name": "Fly SOL Croakster",
+      "bio": "Decentralized life isn\u2019t for everyone, but it\u2019s how I roll. Swipe right if you\u2019re curious."
+  },
+  {
+      "name": "Froggo ETH Master",
+      "bio": "My hops are gas-efficient, but my love is boundless. Let\u2019s make it work."
+  },
+  {
+      "name": "Degen Ribbitz",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Toad APE Master",
+      "bio": "RibbitCoin maximalist, but my heart is open to new projects."
+  },
+  {
+      "name": "Ribbit DOT Toshi",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Hoppy Fiend",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Fly Croakster",
+      "bio": "I believe in taking big hops and even bigger risks. Life\u2019s too short for small leaps."
+  },
+  {
+      "name": "Ribbit DOT Master",
+      "bio": "Flying high, leaping far. Looking for someone who\u2019s ready for the journey."
+  },
+  {
+      "name": "Buggy 0x Vault",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "0x Ribbitz",
+      "bio": "Fly-fi certified and looking for a partner who shares my passion for the decentralized life."
+  },
+  {
+      "name": "0x 0x Ribbitz",
+      "bio": "I\u2019ve been holding feelings as long as I\u2019ve been holding RibbitCoin. Ready to share both."
+  },
+  {
+      "name": "Lily DAO",
+      "bio": "Love is like DeFi: unpredictable but full of potential rewards. Let\u2019s try it out."
+  },
+  {
+      "name": "Hoppy 0x Toshi",
+      "bio": "Rug pulls? Not here. I\u2019m all about trust and transparency, both in love and on-chain."
+  },
+  {
+      "name": "Degen Croakster",
+      "bio": "Gas fees are high, but my standards are higher. Think you can leap over the bar?"
+  },
+  {
+      "name": "Staked Ribbitz",
+      "bio": "Part-time dreamer, full-time hopper. Let\u2019s make this leap count."
+  },
+  {
+      "name": "Leap 0x Smith",
+      "bio": "Decentralized but dreaming of a partnership that\u2019s proof-of-stake."
+  },
+  {
+      "name": "Leap BTC Nakamoto",
+      "bio": "Here for meaningful connections, whether it\u2019s in the swamp or on the blockchain."
+  },
+  {
+      "name": "Lily Fiend",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Buggy Toshi",
+      "bio": "I\u2019ve been on this lily pad for a while, waiting for someone special. Is it you?"
+  },
+  {
+      "name": "Crypto DOT Smith",
+      "bio": "Not your average frog. I\u2019m into governance, DeFi, and long swims in the swamp."
+  }
+]

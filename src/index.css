@@ -46,14 +46,16 @@
 
 /* Name styling */
 .card-name {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  text-shadow: 0px 0px 5px black;
-  border-radius: 0 0 15px 15px;
+  position: absolute;
+  bottom: 10px;
+  width: 80%;
+  border-radius: 4px;
+  color: black;
+  padding: 20px;
+  text-align: left;
+  background-color: white;
+
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /* Fallback Popup Overlay */
